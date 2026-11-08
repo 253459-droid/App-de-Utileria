@@ -106,12 +106,24 @@ fun PresupuestoContent(
 
                         Row(modifier = Modifier.fillMaxWidth()) {
                             Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                                LegendItem(ColorAhorro, stringResource(R.string.leyenda_ahorro, state.porcentajeAhorro.toInt()))
-                                LegendItem(ColorPersonales, stringResource(R.string.leyenda_personales, state.porcentajePersonales.toInt()))
+                                LegendItem(
+                                    ColorAhorro,
+                                    stringResource(R.string.leyenda_ahorro, state.porcentajeAhorro.toInt(), state.montoAhorro.toDoubleOrNull() ?: 0.0)
+                                )
+                                LegendItem(
+                                    ColorPersonales,
+                                    stringResource(R.string.leyenda_personales, state.porcentajePersonales.toInt(), state.gastosPersonales.toDoubleOrNull() ?: 0.0)
+                                )
                             }
                             Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                                LegendItem(ColorBasicos, stringResource(R.string.leyenda_basicos, state.porcentajeBasicos.toInt()))
-                                LegendItem(ColorSobrante, stringResource(R.string.leyenda_sobrante, state.porcentajeSobrante.toInt()))
+                                LegendItem(
+                                    ColorBasicos,
+                                    stringResource(R.string.leyenda_basicos, state.porcentajeBasicos.toInt(), state.gastosBasicos.toDoubleOrNull() ?: 0.0)
+                                )
+                                LegendItem(
+                                    ColorSobrante,
+                                    stringResource(R.string.leyenda_sobrante, state.porcentajeSobrante.toInt(), state.montoSobrante)
+                                )
                             }
                         }
                     }

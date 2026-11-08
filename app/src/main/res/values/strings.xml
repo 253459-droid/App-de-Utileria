@@ -4,13 +4,13 @@
     <string name="titulo_presupuesto">Simulador de presupuesto</string>
     <string name="ingreso_mensual">Ingreso mensual</string>
     <string name="cuanto_ahorrar">Cuánto desea ahorrar</string>
-    <string name="gastos_basicos">Gastos básicos (Agua, Luz, Gas, Etc.)</string>
+    <string name="gastos_basicos">Gastos básicos (agua, luz, gas, etc.)</string>
     <string name="gastos_personales">Gastos personales</string>
 
     <string name="grafica_presupuesto">Gráfica de presupuesto</string>
     <string name="cien_por_ciento">100%</string>
-    <string name="leyenda_ahorro">Ahorro: %1$d%%</string>
-    <string name="leyenda_basicos">Básicos: %1$d%%</string>
-    <string name="leyenda_personales">Personales: %1$d%%</string>
-    <string name="leyenda_sobrante">Sobrante: %1$d%%</string>
+    <string name="leyenda_ahorro">Ahorro: %1$d%% ($%2$.2f)</string>
+    <string name="leyenda_basicos">Básicos: %1$d%% ($%2$.2f)</string>
+    <string name="leyenda_personales">Personales: %1$d%% ($%2$.2f)</string>
+    <string name="leyenda_sobrante">Sobrante: %1$d%% ($%2$.2f)</string>
 </resources>

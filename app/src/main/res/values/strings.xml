@@ -1,12 +1,16 @@
 <resources>
     <string name="app_name">kt_template</string>
-    <string name="titulo_presupuesto">Simulador de Presupuesto</string>
-    <string name="ingreso_mensual">Ingreso Mensual Total ($)</string>
-    <string name="meta_ahorro">Meta de Ahorro: %1$d%%</string>
-    <string name="ahorro_objetivo">Ahorro Objetivo: $%1$.2f</string>
-    <string name="presupuesto_libre">Presupuesto Libre: $%1$.2f</string>
-    <string name="ingresa_gastos">Ingresa tus gastos reales:</string>
-    <string name="gastos_basicos">Gastos Básicos (Renta, Luz, etc.)</string>
-    <string name="estilo_vida">Estilo de Vida (Salidas, Ocio)</string>
-    <string name="limite">Límite: $%1$.2f</string>
+
+    <string name="titulo_presupuesto">Simulador de presupuesto</string>
+    <string name="ingreso_mensual">Ingreso mensual</string>
+    <string name="cuanto_ahorrar">Cuánto desea ahorrar</string>
+    <string name="gastos_basicos">Gastos básicos (Agua, Luz, Gas, Etc.)</string>
+    <string name="gastos_personales">Gastos personales</string>
+
+    <string name="grafica_presupuesto">Gráfica de presupuesto</string>
+    <string name="cien_por_ciento">100%</string>
+    <string name="leyenda_ahorro">Ahorro: %1$d%%</string>
+    <string name="leyenda_basicos">Básicos: %1$d%%</string>
+    <string name="leyenda_personales">Personales: %1$d%%</string>
+    <string name="leyenda_sobrante">Sobrante: %1$d%%</string>
 </resources>

@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.upchiapas.kt_template.R
+import androidx.compose.ui.text.input.ImeAction
 
 val ColorAhorro = Color(0xFF4ADE80)
 val ColorBasicos = Color(0xFFFACC15)
@@ -59,17 +60,16 @@ fun PresupuestoContent(
             )
         }
 
+        item { CustomTextField(state.ingresoMensual, onIngresoChange, R.string.ingreso_mensual) }
+        item { CustomTextField(state.montoAhorro, onAhorroChange, R.string.cuanto_ahorrar) }
+        item { CustomTextField(state.gastosBasicos, onGastosBasicosChange, R.string.gastos_basicos) }
         item {
-            CustomTextField(state.ingresoMensual, onIngresoChange, R.string.ingreso_mensual)
-        }
-        item {
-            CustomTextField(state.montoAhorro, onAhorroChange, R.string.cuanto_ahorrar)
-        }
-        item {
-            CustomTextField(state.gastosBasicos, onGastosBasicosChange, R.string.gastos_basicos)
-        }
-        item {
-            CustomTextField(state.gastosPersonales, onGastosPersonalesChange, R.string.gastos_personales)
+            CustomTextField(
+                value = state.gastosPersonales,
+                onValueChange = onGastosPersonalesChange,
+                labelRes = R.string.gastos_personales,
+                imeAction = ImeAction.Done
+            )
         }
 
         if (state.estaCalculado) {
@@ -134,14 +134,22 @@ fun PresupuestoContent(
 }
 
 @Composable
-fun CustomTextField(value: String, onValueChange: (String) -> Unit, labelRes: Int) {
+fun CustomTextField(
+    value: String,
+    onValueChange: (String) -> Unit,
+    labelRes: Int,
+    imeAction: ImeAction = ImeAction.Next
+) {
     OutlinedTextField(
         value = value,
         onValueChange = onValueChange,
         label = { Text(stringResource(id = labelRes)) },
+        prefix = { Text("$ ") },
         modifier = Modifier.fillMaxWidth(),
         singleLine = true,
-        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+        keyboardOptions = KeyboardOptions(
+            keyboardType = KeyboardType.Number,
+            imeAction = imeAction        ),
         shape = RoundedCornerShape(12.dp)
     )
 }
